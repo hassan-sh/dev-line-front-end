@@ -138,7 +138,7 @@ export default function Charts() {
                   >
                     50%
                   </text>
-                  <Legend align="left" formatter={(value, entry, index) => <span className="text-white text-sm">{value}</span>} />
+                  <Legend align="left" formatter={(value) => <span className="text-white text-sm">{value}</span>} />
                 </PieChart>
               </ResponsiveContainer>
             </CardContent>
