@@ -127,7 +127,7 @@ export default function Testimonials() {
   )
 
   return (
-    <section className="py-16 bg-primary mb-96">
+    <section className=" py-16 bg-primary mb-96">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-12">

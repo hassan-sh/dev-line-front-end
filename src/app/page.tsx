@@ -8,7 +8,6 @@ import OurServices from "./components/OurServices";
 import Partners from "./components/Partners";
 import Philosophy from "./components/Philosophy";
 import Pricing from "./components/Pricing";
-import Testimonials from "./components/Testimonials";
 
 export default function Home() {
   return (
@@ -21,7 +20,7 @@ export default function Home() {
     <Charts />
     <News />
     <Pricing />
-    <Testimonials />
+    {/* <Testimonials /> */}
   </>
   );
 }

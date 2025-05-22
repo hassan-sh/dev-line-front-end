@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Testimonials from "./components/Testimonials";
 
 export const metadata: Metadata = {
   title: "Brand Name - Creative Marketing Solutions",
@@ -25,9 +26,10 @@ export default function RootLayout({
           className="fixed -z-10 w-dvw -left-4 bottom-0 object-contain"
         /> */}
         <Navbar />
-        <main className="flex flex-col gap-20">
+        <main className="max-w-[1440px] mx-auto flex flex-col gap-20 mb-20">
           {children}
         </main>
+        <Testimonials />
         <Footer />
       </body>
     </html>
