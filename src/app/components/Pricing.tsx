@@ -3,8 +3,17 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
+interface PricingPlan {
+  id: string
+  name: string
+  price: number | null
+  description: string
+  badge: string | null
+  highlighted?: boolean
+}
+
 export default function Pricing() {
-  const [expandedPlan, setExpandedPlan] = useState("pro");
+  const [expandedPlan, setExpandedPlan] = useState<string | null>("pro");
 
   const pricingPlans = [
     {
@@ -13,7 +22,6 @@ export default function Pricing() {
       price: null,
       description: "Pro account gives you freedom with uploading HD videos and can also meet all your business needs apasioh kamu",
       badge: null,
-      features: [],
     },
     {
       id: "base",
@@ -21,7 +29,6 @@ export default function Pricing() {
       price: null,
       description: "Pro account gives you freedom with uploading HD videos and can also meet all your business needs apasioh kamu",
       badge: null,
-      features: [],
     },
     {
       id: "pro",
@@ -29,7 +36,6 @@ export default function Pricing() {
       price: 123,
       description: "Pro account gives you freedom with uploading HD videos and can also meet all your business needs apasioh kamu",
       badge: "Save $40",
-      features: [],
       highlighted: true,
     },
     {
@@ -38,16 +44,22 @@ export default function Pricing() {
       price: null,
       description: "Pro account gives you freedom with uploading HD videos and can also meet all your business needs apasioh kamu",
       badge: null,
-      features: [],
     },
   ];
 
-  const togglePlan = (planId) => {
-    console.log('hhhhh')
-    setExpandedPlan(expandedPlan === planId ? null : planId);
+  const togglePlan = (planId: string) => {
+    setExpandedPlan((prev) => (prev === planId ? null : planId))
+    // setExpandedPlan(expandedPlan === planId ? null : planId);
   };
 
-  const PricingCard = ({ plan, isExpanded, onToggle }) => {
+  // fully typed Props
+  interface PricingCardProps {
+    plan: PricingPlan
+    isExpanded: boolean
+    onToggle: (id: string) => void
+  }
+
+  const PricingCard: React.FC<PricingCardProps> = ({ plan, isExpanded, onToggle }) => {
     const isHighlighted = isExpanded;
     
     return (

@@ -71,7 +71,7 @@ export default function Charts() {
                         domain={[0, 200]}
                         ticks={[0, 25, 50, 75, 100, 125, 150, 175, 200]}
                     />
-                    <Bar dataKey="value" barSize={20} fill={(entry) => entry.color} >
+                    <Bar dataKey="value" barSize={20} >
                         {barData.map((entry, index) => (
                             <Cell key={`cell-${index}`} fill={entry.color} />
                         ))}

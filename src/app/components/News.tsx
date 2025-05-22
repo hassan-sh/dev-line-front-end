@@ -4,8 +4,17 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 
+interface Article {
+  id: number
+  type: "featured" | "small"
+  image: string
+  title: string
+  description?: string
+  tags: string[]
+}
+
 export default function News() {
-    const featuredNews = {
+    const featuredNews: Article = {
         id: 1,
         type: "featured",
         image: "/blog/blog-01.webp",
@@ -14,7 +23,7 @@ export default function News() {
         tags: ["Company", "Contracts"],
     }
 
-    const newsData = [
+    const newsData: Article[] = [
         {
             id: 2,
             type: "small",
@@ -38,7 +47,8 @@ export default function News() {
         },
     ];
 
-  const NewsCard = ({ article }) => {
+    // const NewsCard = ({ article }) => {
+  const NewsCard: React.FC<{ article: Article  }> = ({ article }) => {
     
     return (
       <div className='flex gap-6'>
