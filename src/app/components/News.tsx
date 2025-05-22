@@ -89,7 +89,7 @@ export default function News() {
         <div className="flex justify-between items-center mb-12">
           <h2 className=" text-3xl font-semibold">News</h2>
           <Button 
-            className="hidden md:block bg-primary px-6 py-2 rounded-full"
+            className="hidden md:block bg-primary px-6 py-2 rounded-full cursor-pointer"
           >
             View all news
           </Button>

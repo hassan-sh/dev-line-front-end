@@ -43,7 +43,7 @@ export default function Footer() {
                     </div>
                     <button
                     type="submit"
-                    className={`bg-background hover:bg-primary text-white font-medium text-lg py-3 px-6 rounded-[200px] transition-colors ${
+                    className={`bg-background text-white font-medium text-lg py-3 px-6 rounded-[200px] transition-colors cursor-pointer ${
                         isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                     }`}
                     disabled={isSubmitting || isSuccess}
@@ -63,7 +63,7 @@ export default function Footer() {
                         </Link>
                     </div>
 
-                    <div className='flex justify-between text-left'>
+                    <div className='flex justify-between gap-4 text-left'>
                         <div>
                             <h4 className="font-semibold mb-3 text-white">The company</h4>
                             <ul className="space-y-2 text-sm text-white/80">
