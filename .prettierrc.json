@@ -1,0 +1,9 @@
+{
+  "printWidth": 1000000,
+  "proseWrap": "never",
+  "singleQuote": true,
+  "trailingComma": "all",
+  "semi": true,
+  "tabWidth": 4,
+  "endOfLine": "auto"
+}

@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## License
+
+This project is **not licensed** for use, redistribution, or commercial purposes. All rights reserved by the author.
+
 ## Getting Started
 
 First, run the development server:
