@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## License
 
-This project is **not licensed** for use, redistribution, or commercial purposes. All rights reserved by the author.
+This project is **not licensed** for use, redistribution, or commercial purposes. All rights reserved by the author 'HASSAN ALSHEHARI'.
 
 ## Getting Started
 

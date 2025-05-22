@@ -27,7 +27,7 @@ const pieData = [
 ]
 
 // Custom tick formatter for Y-axis
-const formatYAxisTick = (value) => {
+const formatYAxisTick = (value: number | string): string => {
 return value.toString();
 };
 
